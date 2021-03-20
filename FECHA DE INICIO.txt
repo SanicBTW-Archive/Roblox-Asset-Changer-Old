@@ -1,0 +1,8 @@
+11/10/2020 - Inicio del proyecto (Roblox Asset Changer Remake)
+24/10/2020 - TPD1, Technical Preview Demo 1 (Roblox Asset Changer Remake)
+29/11/2020 - TPD2, Technical Preview Demo 2 (Roblox Asset Changer Remake)
+19/12/2020 - TPD3, Technical Preview Demo 3 Saltada debido a errores con el codigo (Roblox Asset Changer Remake)
+19/12/2020 - EDR1, Early Developer Release 1, Roblox Asset Changer Remake empezado desde cero y saltada a esta version en vez de la TPD3
+- Descanso -
+23/01/2021 - Descanso terminado, volviendo con la EDR1, Early Developer Release 1
+--/--/-- -

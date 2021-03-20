@@ -1,0 +1,67 @@
+﻿<Page x:Class="Roblox_Asset_Changer.Pages.OptionsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Roblox_Asset_Changer.Pages"
+      xmlns:optionslangs="clr-namespace:Roblox_Asset_Changer.Properties.LanguageResources.OptionsPageResources"
+      xmlns:fw="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF"
+      xmlns:ui="http://schemas.modernwpf.com/2019"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:controls="clr-namespace:MaterialDesignExtensions.Controls;assembly=MaterialDesignExtensions"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      TextOptions.TextFormattingMode="Ideal" 
+      TextOptions.TextRenderingMode="Auto"
+      FontFamily="{DynamicResource MaterialDesignFont}"
+      mc:Ignorable="d" 
+      d:DesignHeight="718" d:DesignWidth="940"
+      Title="OptionsPage" Loaded="Page_Loaded">
+
+    <Grid fw:PointerTracker.Enabled="True">
+        <!-- Titulo de la pagina -->
+        <Grid VerticalAlignment="Top" Height="71">
+            <materialDesign:PackIcon Kind="SettingsOutline" Width="41" Height="41" Margin="10,16,0,0"/>
+            <TextBlock Text="{x:Static optionslangs:Language.PageHeaderText}" Margin="56,12,0,9" FontSize="41" VerticalAlignment="Center"/>
+        </Grid>
+        <!-- TabControl para las páginas -->
+        <TabControl Style="{DynamicResource TabControlPivotStyle}" Margin="0,76,0,0">
+            <!--#region Página para el idioma -->
+            <TabItem Header="{x:Static optionslangs:Language.TabControlLanguageHeader}">
+                <Grid>
+                    <materialDesign:PackIcon Kind="Flag" Width="52" Height="52"/>
+                    <ComboBox Name="LanguageCB" SelectionChanged="LanguageCB_SelectionChanged" Style="{DynamicResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="{x:Static optionslangs:Language.LanguageCBHint}" Margin="57,0,0,0" Height="52" VerticalAlignment="Top" HorizontalAlignment="Left" Width="234" >
+                        <ComboBoxItem Content="{x:Static optionslangs:Language.LanguageCBen}"/>
+                        <ComboBoxItem Content="{x:Static optionslangs:Language.LanguageCBesp}"/>
+                    </ComboBox>
+                </Grid>
+            </TabItem>
+            <!--#endregion-->
+            <!--#region Página del directorio de roblox -->
+            <TabItem Header="{x:Static optionslangs:Language.TabControlRobloxDirectoryHeader}">
+                <Grid>
+                    <materialDesign:PackIcon Kind="Folder" Width="52" Height="52"/>
+                    <TextBox Style="{DynamicResource TextBoxRevealStyle}" Name="rblxDirectory" IsReadOnly="True" Margin="57,10,265,0" Text="{x:Static optionslangs:Language.RobloxDirectoryCurrentRobloxDirectory}" Height="32" VerticalAlignment="Top"/>
+                    <Button Content="{x:Static optionslangs:Language.RobloxDirectorySelectFolder}" Style="{DynamicResource ButtonAccentRevealStyle}" x:Name="openrblxfolderlocation" HorizontalAlignment="Right" Width="250" Click="openrblxfolderlocation_Click" Margin="0,10,10,0" Height="32" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <!--#endregion-->
+            <!--#region Página de la interfaz de usuario -->
+            <TabItem Header="{x:Static optionslangs:Language.TabControlUIHeader}">
+                
+            </TabItem>
+            <!--#endregion-->
+            <!--#region Página de el archivo de configuración -->
+            <TabItem Header="{x:Static optionslangs:Language.TabControlConfFileHeader}">
+                
+            </TabItem>
+            <!--#endregion-->
+            <!--#region Página de las opciones de registro -->
+            <TabItem Header="{x:Static optionslangs:Language.TabControlLogHeader}">
+                
+            </TabItem>
+            <!--#endregion-->
+        </TabControl>
+    </Grid>
+</Page>

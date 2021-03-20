@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roblox Asset Changer", "Roblox Asset Changer\Roblox Asset Changer.csproj", "{68244F5B-00A0-4E07-99E6-730DC05D4574}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68244F5B-00A0-4E07-99E6-730DC05D4574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68244F5B-00A0-4E07-99E6-730DC05D4574}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68244F5B-00A0-4E07-99E6-730DC05D4574}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68244F5B-00A0-4E07-99E6-730DC05D4574}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2BBA753C-3D8E-48AD-99B7-5B75FDDCA888}
+	EndGlobalSection
+EndGlobal

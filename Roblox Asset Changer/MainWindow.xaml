@@ -1,0 +1,53 @@
+﻿<controls:MaterialWindow x:Class="Roblox_Asset_Changer.MainWindow" x:Name="MainAppWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Roblox_Asset_Changer"
+        xmlns:shelllangs="clr-namespace:Roblox_Asset_Changer.Properties.LanguageResources.ShellResources"
+        xmlns:fw="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:controls="clr-namespace:MaterialDesignExtensions.Controls;assembly=MaterialDesignExtensions"
+        xmlns:pxmc="https://github.com/paulem/pixelmaniac"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        mc:Ignorable="d"
+        Title="Roblox Asset Changer - EDR1" Height="750" Width="1000" Icon="Assets/robloxTiltRed.png" WindowStartupLocation="CenterScreen" ContentRendered="MainAppWindow_ContentRendered" MinHeight="750" MinWidth="1000">
+    <Grid fw:PointerTracker.Enabled="True">
+        <!-- TB para abrir el menu -->
+        <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="True" x:Name="DrawerMenuTB" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Left" Cursor="Hand" d:IsLocked="True"/>
+        
+        <!-- Frame para ver las paginas -->
+        <ui:Frame x:Name="appcontentFrame" Margin="52,0,0,0"/>
+        
+        <!-- Menu o drawer izquierdo -->
+        <materialDesign:DrawerHost IsLeftDrawerOpen="{Binding ElementName = DrawerMenuTB, Path = IsChecked}" x:Name="AppMenuDrawer">
+            <materialDesign:DrawerHost.LeftDrawerContent>
+                <ui:SimpleStackPanel MinWidth="300">
+                    <ToggleButton Style="{DynamicResource MaterialDesignHamburgerToggleButton}" DockPanel.Dock="Top" HorizontalAlignment="Right" Margin="10" VerticalAlignment="Top" IsChecked="{Binding ElementName = DrawerMenuTB, Path = IsChecked, Mode = TwoWay}"  Cursor="Hand"/>
+
+                    <ListView Width="260" Style="{DynamicResource MaterialDesignListView}" x:Name="AppMenuNav" SelectionChanged="AppMenuNav_SelectionChanged" HorizontalAlignment="Center" DockPanel.Dock="Left" VerticalAlignment="Stretch">
+                        <ListViewItem Content="Roblox Asset Changer Menu" Height="40" IsEnabled="False" HorizontalContentAlignment="Center"/>
+                        <ListViewItem Content="{x:Static shelllangs:Language.listViewHomeHeader}" Height="40" x:Name="HomePagelvi" IsSelected="True" HorizontalContentAlignment="Center"/>
+                        <ListViewItem Content="{x:Static shelllangs:Language.listViewCursorHeader}" Height="40" x:Name="CursorPagelvi" HorizontalContentAlignment="Center"/>
+                        <ListViewItem Content="{x:Static shelllangs:Language.listViewFaceHeader}" Height="40" x:Name="FacePagelvi" HorizontalContentAlignment="Center"/>
+                        <ListViewItem Content="{x:Static shelllangs:Language.listViewLoadingGameHeader}" Height="40" x:Name="LoadingGamePagelvi" HorizontalContentAlignment="Center"/>
+                        <ListViewItem Content="{x:Static shelllangs:Language.listViewRobloxMenuHeader}" Height="40" x:Name="RobloxMenuPagelvi" HorizontalContentAlignment="Center"/>
+                        <ListViewItem Content="{x:Static shelllangs:Language.listViewTopBarHeader}" Height="40" x:Name="TopBarPagelvi" HorizontalContentAlignment="Center"/>
+                        <ListViewItem Content="{x:Static shelllangs:Language.listViewSoundsHeader}" Height="40" x:Name="SoundsPagelvi" HorizontalContentAlignment="Center"/>
+                        <ListViewItem Content="{x:Static shelllangs:Language.listViewOptionsHeader}" Height="40" x:Name="OptionsPagelvi" HorizontalContentAlignment="Center"/>
+                        <ListViewItem Content="{x:Static shelllangs:Language.listViewUpdateHeader}" Height="40" x:Name="UpdatePagelvi" HorizontalContentAlignment="Center"/>
+                        <ListViewItem Content="{x:Static shelllangs:Language.listViewAboutHeader}" Height="40" x:Name="AboutPagelvi" HorizontalContentAlignment="Center"/>
+                    </ListView>
+                </ui:SimpleStackPanel>
+            </materialDesign:DrawerHost.LeftDrawerContent>
+        </materialDesign:DrawerHost>
+        <!-- Zona de las notificaciones -->
+        <pxmc:NotificationArea MaxNotificationsCount="5" Position="BottomRight" d:IsLocked="True"/>
+    </Grid>
+</controls:MaterialWindow>
