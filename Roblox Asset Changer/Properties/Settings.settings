@@ -24,10 +24,7 @@
       <Value Profile="(Default)">EDR1</Value>
     </Setting>
     <Setting Name="BuildNumber" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Build 11</Value>
-    </Setting>
-    <Setting Name="ConsoleLogActivated" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Off</Value>
+      <Value Profile="(Default)">Build 13</Value>
     </Setting>
   </Settings>
 </SettingsFile>

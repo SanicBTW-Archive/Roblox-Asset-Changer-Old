@@ -109,25 +109,13 @@ namespace Roblox_Asset_Changer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Build 11")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Build 13")]
         public string BuildNumber {
             get {
                 return ((string)(this["BuildNumber"]));
             }
             set {
                 this["BuildNumber"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Off")]
-        public string ConsoleLogActivated {
-            get {
-                return ((string)(this["ConsoleLogActivated"]));
-            }
-            set {
-                this["ConsoleLogActivated"] = value;
             }
         }
     }

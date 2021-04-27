@@ -26,12 +26,6 @@ namespace Roblox_Asset_Changer
     /// </summary>
     public partial class MainWindow
     {
-        [DllImport("Kernel32")]
-        public static extern void AllocConsole();
-
-        [DllImport("Kernel32")]
-        public static extern void FreeConsole();
-
         public MainWindow()
         {
             InitializeComponent();
@@ -42,7 +36,7 @@ namespace Roblox_Asset_Changer
         {
             Title = "Roblox Asset Changer - " + Properties.Settings.Default.AppVersion + ", " + Properties.Settings.Default.BuildNumber;
 
-            #region Logging stuff . Pending delet
+            #region Logging stuff same with console logging stuff not necessary or somethin
             /*
             string UserConf = GetDefaultExeConfigPath(ConfigurationUserLevel.PerUserRoamingAndLocal);
             string registros = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), UserConf.Replace("user.config", Properties.Settings.Default.AppVersion));
@@ -85,49 +79,6 @@ namespace Roblox_Asset_Changer
                 notificationManager.Notify(TestingNotification);
 
                 //oLog.Add("TestingNotification has been notified in the application");
-            }
-            #endregion
-            #region Console Config
-
-            AllocConsole();
-
-            Console.SetWindowSize(40, 15);
-
-            Console.SetBufferSize(40, 15);
-
-            Console.SetWindowPosition(0, 0);
-
-            Console.Title = "Roblox Asset Changer Log Console";
-
-            #endregion
-            #region Console Logging
-            Console.WriteLine("Application started\n");
-            Thread.Sleep(10000);
-            Console.WriteLine("Roblox Asset Changer Loaded\n");
-            Thread.Sleep(1000);
-            Console.WriteLine("Settings Loaded\n");
-            Thread.Sleep(1000);
-            Console.WriteLine("No aux log will be provided until EDR1\nBuild XX\n");
-            Thread.Sleep(1000);
-            Console.WriteLine("This console logging thing probably will be obsolete in next build lol\n");
-            Thread.Sleep(1000);
-            Console.WriteLine("Thanks for using Roblox Asset Changer\nEDR1 (Early Developer Release 1)\n");
-            Thread.Sleep(1000);
-            if (Properties.Settings.Default.ConsoleLogActivated.Contains("On"))
-            {
-                Console.WriteLine("Now console will stay opened until\nthe application closes\n");
-            } 
-            else if (Properties.Settings.Default.ConsoleLogActivated.Contains("Off"))
-            {
-                Console.WriteLine("Console will now close in 3...");
-                Thread.Sleep(1000);
-                Console.WriteLine("2...");
-                Thread.Sleep(1000);
-                Console.WriteLine("1...");
-                Thread.Sleep(1000);
-                Console.WriteLine("You can open the console again in the settings page");
-                Thread.Sleep(1000);
-                FreeConsole();
             }
             #endregion
         }
