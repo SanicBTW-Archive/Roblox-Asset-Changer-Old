@@ -6,7 +6,7 @@
       <Value Profile="(Default)">en-US</Value>
     </Setting>
     <Setting Name="robloxlocationFolder" Type="System.String" Scope="User">
-      <Value Profile="(Default)">null</Value>
+      <Value Profile="(Default)">nul</Value>
     </Setting>
     <Setting Name="BetaTesting" Type="System.String" Scope="User">
       <Value Profile="(Default)">Soon</Value>
@@ -24,7 +24,7 @@
       <Value Profile="(Default)">EDR1</Value>
     </Setting>
     <Setting Name="BuildNumber" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Build 13</Value>
+      <Value Profile="(Default)">Build 14</Value>
     </Setting>
   </Settings>
 </SettingsFile>

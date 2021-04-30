@@ -18,6 +18,7 @@ using Roblox_Asset_Changer.Logging;
 using Pixelmaniac.Notifications;
 using System.Runtime.InteropServices;
 using System.Threading;
+using MaterialDesignThemes.Wpf;
 
 namespace Roblox_Asset_Changer
 {
@@ -80,6 +81,61 @@ namespace Roblox_Asset_Changer
 
                 //oLog.Add("TestingNotification has been notified in the application");
             }
+            #endregion
+            #region Load stuff
+            #region Theme stuff
+            var paletteHelper = new MaterialDesignThemes.Wpf.PaletteHelper();
+            ITheme theme = paletteHelper.GetTheme();
+            #region Cargar Default Accent / Load Default Accent
+            if (Properties.Settings.Default.CurrentAccent.Contains("Default"))
+            {
+                theme.SetPrimaryColor(Colors.SlateGray);
+                paletteHelper.SetTheme(theme);
+            }
+            #endregion
+            #region Cargar Red Accent / Load Red Accent
+            if (Properties.Settings.Default.CurrentAccent.Contains("Red"))
+            {
+                theme.SetPrimaryColor(Colors.Red);
+                paletteHelper.SetTheme(theme);
+            }
+            #endregion
+            #region Cargar Blue Accent / Load Blue Accent
+            if (Properties.Settings.Default.CurrentAccent.Contains("Blue"))
+            {
+                theme.SetPrimaryColor(Colors.Blue);
+                paletteHelper.SetTheme(theme);
+            }
+            #endregion
+            #region Cargar Yellow Accent / Load Yellow Accent
+            if (Properties.Settings.Default.CurrentAccent.Contains("Yellow"))
+            {
+                theme.SetPrimaryColor(Colors.Yellow);
+                paletteHelper.SetTheme(theme);
+            }
+            #endregion
+            #region Cargar Green Accent / Load Green Accent
+            if (Properties.Settings.Default.CurrentAccent.Contains("Green"))
+            {
+                theme.SetPrimaryColor(Colors.Green);
+                paletteHelper.SetTheme(theme);
+            }
+            #endregion
+            #region Cargar el tema de la aplicación / Load application theme
+            if (Properties.Settings.Default.CurrentTheme.Contains("Dark"))
+            {
+                ModernWpf.ThemeManager.Current.ApplicationTheme = ModernWpf.ApplicationTheme.Dark;
+                theme.SetBaseTheme(Theme.Dark);
+                paletteHelper.SetTheme(theme);
+            }
+            else if (Properties.Settings.Default.CurrentTheme.Contains("Light"))
+            {
+                ModernWpf.ThemeManager.Current.ApplicationTheme = ModernWpf.ApplicationTheme.Light;
+                theme.SetBaseTheme(Theme.Light);
+                paletteHelper.SetTheme(theme);
+            }
+            #endregion
+            #endregion
             #endregion
         }
         #endregion

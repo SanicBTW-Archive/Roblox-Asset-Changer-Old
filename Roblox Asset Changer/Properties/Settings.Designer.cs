@@ -37,7 +37,7 @@ namespace Roblox_Asset_Changer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("null")]
+        [global::System.Configuration.DefaultSettingValueAttribute("nul")]
         public string robloxlocationFolder {
             get {
                 return ((string)(this["robloxlocationFolder"]));
@@ -109,7 +109,7 @@ namespace Roblox_Asset_Changer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Build 13")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Build 14")]
         public string BuildNumber {
             get {
                 return ((string)(this["BuildNumber"]));

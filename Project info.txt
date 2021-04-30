@@ -4,6 +4,7 @@
 19/12/2020 - TPD3, Technical Preview Demo 3 Skipped due to errors in the code (Roblox Asset Changer Remake)
 19/12/2020 - EDR1, Early Developer Release 1, Roblox Asset Changer made from zero and skipped to this version
 - Break -
-23/01/2021 - Descanso terminado, volviendo con la EDR1, Early Developer Release 1
+23/01/2021 - Break finished, coming back with EDR1, Early Developer Release 1
 - Another break -
 20/03/2021 - Break finished, time to develop this thing
+30/04/2021 - Back from "exams", developing Build 14 ig

@@ -167,5 +167,95 @@ namespace Roblox_Asset_Changer.Properties.LanguageResources.OptionsPageResources
                 return ResourceManager.GetString("TabControlUIHeader", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Blue.
+        /// </summary>
+        public static string UIAccentCBblue {
+            get {
+                return ResourceManager.GetString("UIAccentCBblue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Default.
+        /// </summary>
+        public static string UIAccentCBdefault {
+            get {
+                return ResourceManager.GetString("UIAccentCBdefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Green.
+        /// </summary>
+        public static string UIAccentCBgreen {
+            get {
+                return ResourceManager.GetString("UIAccentCBgreen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Red.
+        /// </summary>
+        public static string UIAccentCBred {
+            get {
+                return ResourceManager.GetString("UIAccentCBred", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Yellow.
+        /// </summary>
+        public static string UIAccentCByellow {
+            get {
+                return ResourceManager.GetString("UIAccentCByellow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Dark Theme On.
+        /// </summary>
+        public static string UIdarkThemeon {
+            get {
+                return ResourceManager.GetString("UIdarkThemeon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Light Theme On.
+        /// </summary>
+        public static string UIlightThemeon {
+            get {
+                return ResourceManager.GetString("UIlightThemeon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Primary Accent Color.
+        /// </summary>
+        public static string UIPrimaryAccentText {
+            get {
+                return ResourceManager.GetString("UIPrimaryAccentText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Secondary Accent Color.
+        /// </summary>
+        public static string UISecondaryAccentText {
+            get {
+                return ResourceManager.GetString("UISecondaryAccentText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Change app theme.
+        /// </summary>
+        public static string UIThemeSw {
+            get {
+                return ResourceManager.GetString("UIThemeSw", resourceCulture);
+            }
+        }
     }
 }

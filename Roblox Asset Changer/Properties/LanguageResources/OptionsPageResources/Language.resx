@@ -153,4 +153,34 @@
   <data name="TabControlUIHeader" xml:space="preserve">
     <value>User Interface</value>
   </data>
+  <data name="UIAccentCBblue" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="UIAccentCBdefault" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="UIAccentCBgreen" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="UIAccentCBred" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="UIAccentCByellow" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
+  <data name="UIdarkThemeon" xml:space="preserve">
+    <value>Dark Theme On</value>
+  </data>
+  <data name="UIlightThemeon" xml:space="preserve">
+    <value>Light Theme On</value>
+  </data>
+  <data name="UIPrimaryAccentText" xml:space="preserve">
+    <value>Primary Accent Color</value>
+  </data>
+  <data name="UISecondaryAccentText" xml:space="preserve">
+    <value>Secondary Accent Color</value>
+  </data>
+  <data name="UIThemeSw" xml:space="preserve">
+    <value>Change app theme</value>
+  </data>
 </root>

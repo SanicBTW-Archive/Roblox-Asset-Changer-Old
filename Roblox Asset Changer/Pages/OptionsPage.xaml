@@ -49,7 +49,29 @@
             <!--#endregion-->
             <!--#region Página de la interfaz de usuario -->
             <TabItem Header="{x:Static optionslangs:Language.TabControlUIHeader}">
-                
+                <Grid>
+                    <TextBlock Text="{x:Static optionslangs:Language.UIPrimaryAccentText}" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" Margin="10 10 0 0"/>
+                    <ComboBox x:Name="ChangePAccent" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,50,0,0" Width="150" SelectionChanged="ChangePAccent_SelectionChanged">
+                        <ComboBoxItem Content="{x:Static optionslangs:Language.UIAccentCBdefault}" x:Name="DefaultAccent"/>
+                        <ComboBoxItem Content="{x:Static optionslangs:Language.UIAccentCBred}" x:Name="RedAccent"/>
+                        <ComboBoxItem Content="{x:Static optionslangs:Language.UIAccentCBblue}" x:Name="BlueAccent"/>
+                        <ComboBoxItem Content="{x:Static optionslangs:Language.UIAccentCByellow}" x:Name="YellowAccent"/>
+                        <ComboBoxItem Content="{x:Static optionslangs:Language.UIAccentCBgreen}" x:Name="GreenAccent"/>
+                    </ComboBox>
+
+                    <ui:ToggleSwitch Header="{x:Static optionslangs:Language.UIThemeSw}" OnContent="{x:Static optionslangs:Language.UIdarkThemeon}" OffContent="{x:Static optionslangs:Language.UIlightThemeon}" x:Name="ThemeChangerTS" Toggled="ThemeChangerTS_Toggled" Margin="10,87,0,456"/>
+
+                    <!-- check cs file for more info about this
+                    <TextBlock Text="{x:Static optionslangs:Language.UISecondaryAccentText}" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" Margin="10 100 0 0"/>
+                    <ComboBox x:Name="ChangeSAccent" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 136 0 0" Width="150" SelectionChanged="ChangeSAccent_SelectionChanged">
+                        <ComboBoxItem Content="{x:Static optionslangs:Language.UIAccentCBdefault}" x:Name="DefaultSAccent"/>
+                        <ComboBoxItem Content="{x:Static optionslangs:Language.UIAccentCBred}" x:Name="RedSAccent"/>
+                        <ComboBoxItem Content="{x:Static optionslangs:Language.UIAccentCBblue}" x:Name="BlueSAccent"/>
+                        <ComboBoxItem Content="{x:Static optionslangs:Language.UIAccentCByellow}" x:Name="YellowSAccent"/>
+                        <ComboBoxItem Content="{x:Static optionslangs:Language.UIAccentCBgreen}" x:Name="GreenSAccent"/>
+                    </ComboBox>
+                    -->
+                </Grid>
             </TabItem>
             <!--#endregion-->
             <!--#region Página de el archivo de configuración -->
