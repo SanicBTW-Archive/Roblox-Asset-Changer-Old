@@ -117,23 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="MainText" xml:space="preserve">
-    <value>Bienvenido a Roblox Asset Changer - EDR1
-
-Esta aplicación esta enfocada en la modificación de los assets de Roblox como 
-por ejemplo: los sonidos, pantalla de carga y más por venir...
-
-Por favor te en cuenta que Roblox Asset Changer usa un montón de 
-codigo de legado (Roblox Asset Changer WPF, WPF Remake y Classic (WinForms)) 
-que mejorara por el tiempo
-
-Algunas builds están diseñadas con razones de desarrollo y para ver si 
-de verdad funcionan, actualmente estás usando la build 15
-que es solo para ver si el desarrollo funciona
-
-(Este texto cambiara en las siguientes builds)</value>
+  <data name="ArrowCursorPreviewCustTxt" xml:space="preserve">
+    <value>Preview con color de fondo custom</value>
+  </data>
+  <data name="ArrowCursorPreviewTxt" xml:space="preserve">
+    <value>Preview sin nada</value>
+  </data>
+  <data name="ArrowCursorPreviewWSkyBoxTxt" xml:space="preserve">
+    <value>Preview con skybox</value>
   </data>
   <data name="PageHeaderText" xml:space="preserve">
-    <value>Inicio</value>
+    <value>Página de cursores</value>
+  </data>
+  <data name="TabControlArrowCursorHeader" xml:space="preserve">
+    <value>Pestaña de Arrow Cursor</value>
+  </data>
+  <data name="TabControlArrowFarCursorHeader" xml:space="preserve">
+    <value>Pestaña de Arrow Far Cursor</value>
   </data>
 </root>

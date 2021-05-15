@@ -1,4 +1,0 @@
-Build 14 Commit (UI Settings Added)
----Added the essentials for the UI settings, working UI settings, added each string for each language and
----"improved the code", added some files for commit history and etc, lazy to add here what i did today
----(30/04/2021 - 01/05/2021) so yeah thats all i can say for now

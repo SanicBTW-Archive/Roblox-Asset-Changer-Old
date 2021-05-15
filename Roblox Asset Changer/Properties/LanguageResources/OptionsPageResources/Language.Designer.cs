@@ -61,6 +61,16 @@ namespace Roblox_Asset_Changer.Properties.LanguageResources.OptionsPageResources
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Oops, tab in development, 
+        ///this tab will be available in a future build..
+        /// </summary>
+        public static string Gblindev {
+            get {
+                return ResourceManager.GetString("Gblindev", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a English (Inglés).
         /// </summary>
         public static string LanguageCBen {

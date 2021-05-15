@@ -1,0 +1,11 @@
+Build 14 Commit (UI Settings Added, PRIVATE, master branch)
+#--Added the essentials for the UI settings, working UI settings, added each string for each language and
+#--"improved the code", added some files for commit history and etc, lazy to add here what i did today
+#--(30/04/2021 - 01/05/2021) so yeah thats all i can say for now
+
+Early Build 15 Commit (Cursor Page design finished?, PRIVATE, master branch)
+#--Made design for the funny arrow cursor tab, pending arrow far cursor tab design and full page design
+#--See the ToDo.txt file for more info about the stuff left (A Trello may be opened soon)
+#--Made a new branch for development stuff and not break the main code
+#--Added some assets for testing only and other for converting stuff and make the ideas functional
+

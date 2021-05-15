@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="MainText" xml:space="preserve">
-    <value>Welcome to Roblox Asset Changer - *number version*
+    <value>Welcome to Roblox Asset Changer - EDR1
 
 This application is focused on the modification of Roblox Assets as for example: 
 the sounds, loading game and more to come...
@@ -128,7 +128,7 @@ lot of legacy code (Roblox Asset Changer WPF, WPF Remake and Classic (WinForms))
 get better overtime
 
 Some builds are meant to be for testing purposes only,
-currently you are using *build number* which is for testing only
+currently you are using build 15 which is for testing only
 
 (Expect this text to change in newer builds)</value>
   </data>

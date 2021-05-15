@@ -109,7 +109,7 @@ namespace Roblox_Asset_Changer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Build 14")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Build 15")]
         public string BuildNumber {
             get {
                 return ((string)(this["BuildNumber"]));

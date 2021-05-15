@@ -79,6 +79,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Assets\ColorToBrushConverter.cs" />
     <Compile Include="Logging\Log.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -167,6 +168,16 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Properties\LanguageResources\CursorPageResources\Language.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\LanguageResources\CursorPageResources\Language.es.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language.es.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\LanguageResources\HomePageResources\Language.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -207,6 +218,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Properties\LanguageResources\CursorPageResources\Language.es.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.es.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\LanguageResources\CursorPageResources\Language.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\LanguageResources\HomePageResources\Language.es.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Language.es.Designer.cs</LastGenOutput>
@@ -296,13 +315,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\LanguageResources\AboutPageResources\" />
-    <Folder Include="Properties\LanguageResources\CursorPageResources\" />
     <Folder Include="Properties\LanguageResources\FacePageResources\" />
     <Folder Include="Properties\LanguageResources\LoadingGamePageResources\" />
     <Folder Include="Properties\LanguageResources\RobloxMenuPageResources\" />
     <Folder Include="Properties\LanguageResources\SoundsPageResources\" />
     <Folder Include="Properties\LanguageResources\TopBarPageResources\" />
     <Folder Include="Properties\LanguageResources\UpdatePageResources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\ForTestingPurposes.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

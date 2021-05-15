@@ -4,11 +4,73 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Roblox_Asset_Changer.Pages"
+      xmlns:cursorlangs="clr-namespace:Roblox_Asset_Changer.Properties.LanguageResources.CursorPageResources"
+      xmlns:fw="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF"
+      xmlns:ui="http://schemas.modernwpf.com/2019"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:controls="clr-namespace:MaterialDesignExtensions.Controls;assembly=MaterialDesignExtensions"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      TextOptions.TextFormattingMode="Ideal" 
+      TextOptions.TextRenderingMode="Auto"
+      FontFamily="{DynamicResource MaterialDesignFont}"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="718" d:DesignWidth="940"
+      xmlns:converters="clr-namespace:Roblox_Asset_Changer_WPF_Remake.Assets"
       Title="CursorPage">
 
-    <Grid>
-        
+    <Page.Resources>
+        <ResourceDictionary>
+            <converters:ColorToBrushConverter x:Key="ColorToBrushConverter"/>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid fw:PointerTracker.Enabled="True">
+        <!--#region Titulo de la página-->
+        <Grid VerticalAlignment="Top" Height="71">
+            <materialDesign:PackIcon Kind="CursorDefaultOutline" Width="41" Height="41" Margin="10 16 0 0"/>
+            <TextBlock Text="{x:Static cursorlangs:Language.PageHeaderText}" Margin="56 12 0 9" FontSize="41" VerticalAlignment="Center"/>
+        </Grid>
+        <!--#endregion-->
+        <!--#region Controles de la página y etc-->
+        <TabControl Style="{DynamicResource TabControlPivotStyle}" Margin="0,76,0,0">
+            <!--#region Arrow Cursor-->
+            <TabItem Header="{x:Static cursorlangs:Language.TabControlArrowCursorHeader}">
+                <Grid>
+                    <!--#region Previews-->
+                    <Image Source="/Assets/RobloxScreenshotEditedOnlySkybox.png" Width="128" Height="128" Stretch="UniformToFill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10"/>
+                    <Image Width="64" Height="64" Stretch="UniformToFill" VerticalAlignment="Top" HorizontalAlignment="Left" x:Name="ArrowCursorPrevwSky" Margin="34,36,0,0"
+                           Source="/Assets/ForTestingPurposes.png"/>
+                    <TextBlock Text="{x:Static cursorlangs:Language.ArrowCursorPreviewWSkyBoxTxt}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="143,105,0,0" FontSize="25"/>
+
+                    <Image Width="64" Height="64" Stretch="UniformToFill" VerticalAlignment="Top" HorizontalAlignment="Left" x:Name="ArrowCursorPrev" Margin="143,10,0,0"
+                           Source="/Assets/ForTestingPurposes.png"/>
+                    <TextBlock Text="{x:Static cursorlangs:Language.ArrowCursorPreviewTxt}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="212,42,0,0" FontSize="25"/>
+
+                    <Rectangle Width="128" Height="128" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,143,0,0" Fill="{Binding ElementName=ArrowCursorCustColorPik, Path=Color, Converter={StaticResource ColorToBrushConverter}}" />
+                    <Image Width="64" Height="64" Stretch="UniformToFill" VerticalAlignment="Top" HorizontalAlignment="Left" x:Name="ArrowCursorPrevCust" Margin="36,166,0,0"
+                           Source="/Assets/ForTestingPurposes.png"/>
+                    <materialDesign:ColorPicker Margin="143,143,10,0" x:Name="ArrowCursorCustColorPik" Height="128" VerticalAlignment="Top" Color="#FF635454"/>
+                    <TextBlock Text="{x:Static cursorlangs:Language.ArrowCursorPreviewCustTxt}" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25" Margin="10,276,0,0"/>
+                    <!--#endregion-->
+                </Grid>
+            </TabItem>
+            <!--#endregion-->
+
+            <!--#region Arrow Far Cursor-->
+            <TabItem Header="{x:Static cursorlangs:Language.TabControlArrowFarCursorHeader}">
+                <Grid>
+                    <!--#region Previews-->
+                    <Image Source="/Assets/RobloxScreenshotEditedOnlySkybox.png" Width="128" Height="128" Stretch="UniformToFill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10"/>
+                    <Image Width="64" Height="64" Stretch="UniformToFill" VerticalAlignment="Top" HorizontalAlignment="Left" x:Name="ArrowFarCursorPrevwSky" Margin="42,42,0,0"/>
+
+                    <Image Width="64" Height="64" Stretch="UniformToFill" VerticalAlignment="Top" HorizontalAlignment="Left" x:Name="ArrowFarCursorPrev" Margin="143,10,0,0"/>
+                    <!--#endregion-->
+                </Grid>
+            </TabItem>
+            <!--#endregion-->
+        </TabControl>
+        <!--#endregion-->
     </Grid>
 </Page>

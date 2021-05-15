@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Roblox_Asset_Changer.Properties.LanguageResources.HomePageResources {
+namespace Roblox_Asset_Changer.Properties.LanguageResources.CursorPageResources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Roblox_Asset_Changer.Properties.LanguageResources.HomePageResources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Roblox_Asset_Changer.Properties.LanguageResources.HomePageResources.Language", typeof(Language).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Roblox_Asset_Changer.Properties.LanguageResources.CursorPageResources.Language", typeof(Language).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,32 +61,56 @@ namespace Roblox_Asset_Changer.Properties.LanguageResources.HomePageResources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Welcome to Roblox Asset Changer - EDR1
-        ///
-        ///This application is focused on the modification of Roblox Assets as for example: 
-        ///the sounds, loading game and more to come...
-        ///
-        ///Please be aware that Roblox Asset Changer uses a
-        ///lot of legacy code (Roblox Asset Changer WPF, WPF Remake and Classic (WinForms)) that will
-        ///get better overtime
-        ///
-        ///Some builds are meant to be for testing purposes only,
-        ///currently you are using build 15 which is for testing only
-        ///
-        ///(Expect this text to change in newer builds).
+        ///   Busca una cadena traducida similar a Preview with custom background.
         /// </summary>
-        public static string MainText {
+        public static string ArrowCursorPreviewCustTxt {
             get {
-                return ResourceManager.GetString("MainText", resourceCulture);
+                return ResourceManager.GetString("ArrowCursorPreviewCustTxt", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Home.
+        ///   Busca una cadena traducida similar a Preview without anything.
+        /// </summary>
+        public static string ArrowCursorPreviewTxt {
+            get {
+                return ResourceManager.GetString("ArrowCursorPreviewTxt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Preview with skybox.
+        /// </summary>
+        public static string ArrowCursorPreviewWSkyBoxTxt {
+            get {
+                return ResourceManager.GetString("ArrowCursorPreviewWSkyBoxTxt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cursor Page.
         /// </summary>
         public static string PageHeaderText {
             get {
                 return ResourceManager.GetString("PageHeaderText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Arrow Cursor Tab.
+        /// </summary>
+        public static string TabControlArrowCursorHeader {
+            get {
+                return ResourceManager.GetString("TabControlArrowCursorHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Arrow Far Cursor Tab.
+        /// </summary>
+        public static string TabControlArrowFarCursorHeader {
+            get {
+                return ResourceManager.GetString("TabControlArrowFarCursorHeader", resourceCulture);
             }
         }
     }

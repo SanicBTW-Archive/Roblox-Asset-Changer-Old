@@ -24,7 +24,7 @@
       <Value Profile="(Default)">EDR1</Value>
     </Setting>
     <Setting Name="BuildNumber" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Build 14</Value>
+      <Value Profile="(Default)">Build 15</Value>
     </Setting>
   </Settings>
 </SettingsFile>

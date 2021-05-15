@@ -30,7 +30,7 @@
             <!--#region Página para el idioma -->
             <TabItem Header="{x:Static optionslangs:Language.TabControlLanguageHeader}">
                 <Grid>
-                    <materialDesign:PackIcon Kind="Flag" Width="52" Height="52"/>
+                    <materialDesign:PackIcon Kind="FlagOutline" Width="52" Height="52"/>
                     <ComboBox Name="LanguageCB" SelectionChanged="LanguageCB_SelectionChanged" Style="{DynamicResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="{x:Static optionslangs:Language.LanguageCBHint}" Margin="57,0,0,0" Height="52" VerticalAlignment="Top" HorizontalAlignment="Left" Width="234" >
                         <ComboBoxItem Content="{x:Static optionslangs:Language.LanguageCBen}"/>
                         <ComboBoxItem Content="{x:Static optionslangs:Language.LanguageCBesp}"/>
@@ -41,7 +41,7 @@
             <!--#region Página del directorio de roblox -->
             <TabItem Header="{x:Static optionslangs:Language.TabControlRobloxDirectoryHeader}">
                 <Grid>
-                    <materialDesign:PackIcon Kind="Folder" Width="52" Height="52"/>
+                    <materialDesign:PackIcon Kind="FolderCogOutline" Width="52" Height="52"/>
                     <TextBox Style="{DynamicResource TextBoxRevealStyle}" Name="rblxDirectory" IsReadOnly="True" Margin="57,10,265,0" Text="{x:Static optionslangs:Language.RobloxDirectoryCurrentRobloxDirectory}" Height="32" VerticalAlignment="Top"/>
                     <Button Content="{x:Static optionslangs:Language.RobloxDirectorySelectFolder}" Style="{DynamicResource ButtonAccentRevealStyle}" x:Name="openrblxfolderlocation" HorizontalAlignment="Right" Width="250" Click="openrblxfolderlocation_Click" Margin="0,10,10,0" Height="32" VerticalAlignment="Top"/>
                 </Grid>
@@ -59,7 +59,7 @@
                         <ComboBoxItem Content="{x:Static optionslangs:Language.UIAccentCBgreen}" x:Name="GreenAccent"/>
                     </ComboBox>
 
-                    <ui:ToggleSwitch Header="{x:Static optionslangs:Language.UIThemeSw}" OnContent="{x:Static optionslangs:Language.UIdarkThemeon}" OffContent="{x:Static optionslangs:Language.UIlightThemeon}" x:Name="ThemeChangerTS" Toggled="ThemeChangerTS_Toggled" Margin="10,87,0,456"/>
+                    <ui:ToggleSwitch Header="{x:Static optionslangs:Language.UIThemeSw}" OnContent="{x:Static optionslangs:Language.UIdarkThemeon}" OffContent="{x:Static optionslangs:Language.UIlightThemeon}" x:Name="ThemeChangerTS" Toggled="ThemeChangerTS_Toggled" Margin="10,87,0,456" VerticalAlignment="Top" HorizontalAlignment="Left"/>
 
                     <!-- check cs file for more info about this
                     <TextBlock Text="{x:Static optionslangs:Language.UISecondaryAccentText}" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" Margin="10 100 0 0"/>
@@ -76,12 +76,18 @@
             <!--#endregion-->
             <!--#region Página de el archivo de configuración -->
             <TabItem Header="{x:Static optionslangs:Language.TabControlConfFileHeader}">
-                
+                <Grid>
+                    <ui:ProgressRing IsActive="True" Height="66" Width="66" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 0 0 0"/>
+                    <TextBlock Text="{x:Static optionslangs:Language.Gblindev}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="80 0 0 0" FontSize="26"/>
+                </Grid>
             </TabItem>
             <!--#endregion-->
             <!--#region Página de las opciones de registro -->
             <TabItem Header="{x:Static optionslangs:Language.TabControlLogHeader}">
-                
+                <Grid>
+                    <ui:ProgressRing IsActive="True" Height="66" Width="66" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 0 0 0"/>
+                    <TextBlock Text="{x:Static optionslangs:Language.Gblindev}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="80 0 0 0" FontSize="26"/>
+                </Grid>
             </TabItem>
             <!--#endregion-->
         </TabControl>
