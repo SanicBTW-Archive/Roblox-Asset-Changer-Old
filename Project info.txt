@@ -11,4 +11,5 @@
 01/05/2021 - Build 14 finished ig, Build 15
 15/05/2021 - Created the InDev "indev" Branch for development purposes and to not break the funny main code
 15/05/2021 - Published early Build 15 finishing results
+16/05/2021 - Deleted the InDev "indev" Branch bc I forgot how to use github and shit lol
 ??/05/2021 - Build 15 finished?, Build 16 (lol took me a lot of time cuz of school n shit)

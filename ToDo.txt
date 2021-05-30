@@ -1,5 +1,6 @@
 #--Main stuff
 improve regions
+make pending regions on every page or something lol
 improve comments
 improve code - prob never happen lol
 change code location (reorder in different regions)
@@ -7,9 +8,10 @@ maybe do some sick animations
 imrpove ui
 fix the language resources or maybe just improve thm
 imrpve page headers lol
-#--InDev Build 15
-make a place for the new customized previews for cursor page
+#--"InDev" Build 15
+make a place for the new customized previews for cursor page - done ig
 maybe change the design of the cursor page
+add pending languages strings
 #--Main Build 15
 finish cursor page (code and design for page)
 finish customized previews
