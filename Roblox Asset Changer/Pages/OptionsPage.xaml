@@ -44,6 +44,8 @@
                     <materialDesign:PackIcon Kind="FolderCogOutline" Width="52" Height="52"/>
                     <TextBox Style="{DynamicResource TextBoxRevealStyle}" Name="rblxDirectory" IsReadOnly="True" Margin="57,10,265,0" Text="{x:Static optionslangs:Language.RobloxDirectoryCurrentRobloxDirectory}" Height="32" VerticalAlignment="Top"/>
                     <Button Content="{x:Static optionslangs:Language.RobloxDirectorySelectFolder}" Style="{DynamicResource ButtonAccentRevealStyle}" x:Name="openrblxfolderlocation" HorizontalAlignment="Right" Width="250" Click="openrblxfolderlocation_Click" Margin="0,10,10,0" Height="32" VerticalAlignment="Top"/>
+
+                    <Button Content="{x:Static optionslangs:Language.RobloxDirectoryResetBtn}" Style="{DynamicResource ButtonAccentRevealStyle}" x:Name="resetrlbxfolderlocation" HorizontalAlignment="Right" Width="250" Click="resetrlbxfolderlocation_Click" Margin="0,0,10,515" Height="32" VerticalAlignment="Bottom"/>
                 </Grid>
             </TabItem>
             <!--#endregion-->

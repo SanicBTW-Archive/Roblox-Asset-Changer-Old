@@ -169,16 +169,15 @@ namespace Roblox_Asset_Changer.Pages
                 System.Diagnostics.Process.Start("explorer.exe", Properties.Settings.Default.robloxlocationFolder);
                 openrblxfolderlocation.Content = Properties.LanguageResources.OptionsPageResources.Language.RobloxDirectoryOpenFolderSelection;
             }
-
-            else if (Properties.Settings.Default.languageCode.Contains("en-US"))
-            {
-                RobloxFolderSelectPromptEN();
-            }
-            else if (Properties.Settings.Default.languageCode.Contains("es-ES"))
-            {
-                RobloxFolderSelectPromptES();
-            }
+            RobloxFolderSelectPrompt();
         }
+        private void resetrlbxfolderlocation_Click(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.robloxlocationFolder = "nul";
+            Properties.Settings.Default.Save();
+            rblxDirectory.Text = Properties.LanguageResources.OptionsPageResources.Language.RobloxDirectoryCurrentRobloxDirectory + " " + Properties.Settings.Default.robloxlocationFolder;
+        }
+
         #endregion
         #region Página de interfaz de usuario
         private void ChangePAccent_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -338,7 +337,7 @@ namespace Roblox_Asset_Changer.Pages
         }
         #endregion
         #region Prompt para elegir la carpeta de roblox / Prompt to choose roblox folder
-        private async void RobloxFolderSelectPromptEN()
+        private async void RobloxFolderSelectPrompt()
         {
             string RobloxStarterDirectory = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Roblox", "Versions");
 
@@ -361,58 +360,10 @@ namespace Roblox_Asset_Changer.Pages
 
             ModernWpf.Controls.ContentDialog FolderSelect = new ModernWpf.Controls.ContentDialog
             {
-                Title = "Roblox Folder Selection",
-                Content = "A new window will now open to select the Roblox Folder, please keep in mind that it has to be the latest version of Roblox or else the program won't work",
-                PrimaryButtonText = "Let me select the folder!",
-                CloseButtonText = "I'm not ready",
-                DefaultButton = ModernWpf.Controls.ContentDialogButton.Primary
-            };
-
-            ModernWpf.Controls.ContentDialogResult oidude = await FolderSelect.ShowAsync();
-
-            if (oidude == ModernWpf.Controls.ContentDialogResult.Primary)
-            {
-                if (oldshelldlg.ShowDialog() == CommonFileDialogResult.Ok)
-                {
-                    var SelectedFolder = oldshelldlg.FileName;
-
-                    Properties.Settings.Default.robloxlocationFolder = SelectedFolder;
-
-                    rblxDirectory.Text = Properties.LanguageResources.OptionsPageResources.Language.RobloxDirectoryCurrentRobloxDirectory + " " + Properties.Settings.Default.robloxlocationFolder;
-
-                    Properties.Settings.Default.Save();
-
-                    openrblxfolderlocation.Content = Properties.LanguageResources.OptionsPageResources.Language.RobloxDirectoryOpenFolderSelection;
-                }
-            }
-        }
-        private async void RobloxFolderSelectPromptES()
-        {
-            string RobloxStarterDirectory = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Roblox", "Versions");
-
-            var oldshelldlg = new CommonOpenFileDialog();
-
-            oldshelldlg.Title = "Roblox Asset Changer " + Properties.Settings.Default.AppVersion + " - Selección de carpeta de Roblox";
-            oldshelldlg.IsFolderPicker = true;
-
-            oldshelldlg.InitialDirectory = RobloxStarterDirectory;
-            oldshelldlg.DefaultDirectory = RobloxStarterDirectory;
-
-            oldshelldlg.AddToMostRecentlyUsedList = false;
-            oldshelldlg.AllowNonFileSystemItems = false;
-            oldshelldlg.EnsureFileExists = true;
-            oldshelldlg.EnsurePathExists = true;
-            oldshelldlg.EnsureReadOnly = false;
-            oldshelldlg.EnsureValidNames = true;
-            oldshelldlg.Multiselect = false;
-            oldshelldlg.ShowPlacesList = true;
-
-            ModernWpf.Controls.ContentDialog FolderSelect = new ModernWpf.Controls.ContentDialog
-            {
-                Title = "Selección de carpeta de Roblox",
-                Content = "Una nueva ventana se abrira ahora para seleccionar la carpeta de Roblox, por favor ten en cuenta de que tiene que ser la última versión de Roblox o si no el programa no funcionara",
-                PrimaryButtonText = "¡Dejame seleccionar la carpeta!",
-                CloseButtonText = "No estoy preparado.",
+                Title = Properties.LanguageResources.OptionsPageResources.Language.behindCodePromptFolderSelecTitle,
+                Content = Properties.LanguageResources.OptionsPageResources.Language.behindCodePromptFolderSelecContent,
+                PrimaryButtonText = Properties.LanguageResources.OptionsPageResources.Language.behindCodePromptFolderSelecPrimBtn,
+                CloseButtonText = Properties.LanguageResources.OptionsPageResources.Language.behindCodePromptFolderSelecCloseBtn,
                 DefaultButton = ModernWpf.Controls.ContentDialogButton.Primary
             };
 

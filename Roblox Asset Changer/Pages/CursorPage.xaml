@@ -6,9 +6,7 @@
       xmlns:local="clr-namespace:Roblox_Asset_Changer.Pages"
       xmlns:cursorlangs="clr-namespace:Roblox_Asset_Changer.Properties.LanguageResources.CursorPageResources"
       xmlns:fw="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF"
-      xmlns:ui="http://schemas.modernwpf.com/2019"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-      xmlns:controls="clr-namespace:MaterialDesignExtensions.Controls;assembly=MaterialDesignExtensions"
       TextElement.Foreground="{DynamicResource MaterialDesignBody}"
       TextElement.FontWeight="Regular"
       TextElement.FontSize="13"
@@ -53,6 +51,10 @@
                            Source="/Assets/ForTestingPurposes.png"/>
                     <materialDesign:ColorPicker Margin="143,143,10,0" x:Name="ArrowCursorCustColorPik" Height="128" VerticalAlignment="Top" Color="#FF635454"/>
                     <TextBlock Text="{x:Static cursorlangs:Language.ArrowCursorPreviewCustTxt}" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25" Margin="10,276,0,0"/>
+                    <!--#endregion-->
+                    
+                    <!--#region Botones -->
+                    <Button Content="Cambiar" Margin="10,314,0,248" x:Name="ChangeACBtn" Click="ChangeACBtn_Click"/>
                     <!--#endregion-->
                 </Grid>
             </TabItem>

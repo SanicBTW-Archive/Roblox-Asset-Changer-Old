@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using Roblox_Asset_Changer.Assets;
+
 namespace Roblox_Asset_Changer.Pages
 {
     /// <summary>
@@ -24,5 +26,13 @@ namespace Roblox_Asset_Changer.Pages
         {
             InitializeComponent();
         }
+
+        #region Eventos de click / Click btn events
+        private void ChangeACBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ChangerClass.currentlyChanging = "Arrow Cursor";
+            ChangerClass.MainChanger("Cursor");
+        }
+        #endregion
     }
 }

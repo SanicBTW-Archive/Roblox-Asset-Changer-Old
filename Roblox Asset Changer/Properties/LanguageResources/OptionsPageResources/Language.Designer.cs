@@ -19,7 +19,7 @@ namespace Roblox_Asset_Changer.Properties.LanguageResources.OptionsPageResources
     // a través de una herramienta como ResGen o Visual Studio.
     // Para agregar o quitar un miembro, edite el archivo .ResX y, a continuación, vuelva a ejecutar ResGen
     // con la opción /str o recompile su proyecto de VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Language {
@@ -57,6 +57,42 @@ namespace Roblox_Asset_Changer.Properties.LanguageResources.OptionsPageResources
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a I&apos;m not ready.
+        /// </summary>
+        public static string behindCodePromptFolderSelecCloseBtn {
+            get {
+                return ResourceManager.GetString("behindCodePromptFolderSelecCloseBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a A new window will now open to select the Roblox Folder, please keep in mind that it has to be the latest version of Roblox or else the program won&apos;t work.
+        /// </summary>
+        public static string behindCodePromptFolderSelecContent {
+            get {
+                return ResourceManager.GetString("behindCodePromptFolderSelecContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Let me select the folder!.
+        /// </summary>
+        public static string behindCodePromptFolderSelecPrimBtn {
+            get {
+                return ResourceManager.GetString("behindCodePromptFolderSelecPrimBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Roblox Folder Selection.
+        /// </summary>
+        public static string behindCodePromptFolderSelecTitle {
+            get {
+                return ResourceManager.GetString("behindCodePromptFolderSelecTitle", resourceCulture);
             }
         }
         
@@ -121,6 +157,24 @@ namespace Roblox_Asset_Changer.Properties.LanguageResources.OptionsPageResources
         public static string RobloxDirectoryOpenFolderSelection {
             get {
                 return ResourceManager.GetString("RobloxDirectoryOpenFolderSelection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Reset Roblox Folder Directory.
+        /// </summary>
+        public static string RobloxDirectoryResetBtn {
+            get {
+                return ResourceManager.GetString("RobloxDirectoryResetBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Sometimes my funny code doesn&apos;t works, so I added this just in case..
+        /// </summary>
+        public static string RobloxDirectoryResetText {
+            get {
+                return ResourceManager.GetString("RobloxDirectoryResetText", resourceCulture);
             }
         }
         

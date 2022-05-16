@@ -79,6 +79,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Assets\ChangerClass.cs" />
     <Compile Include="Assets\ColorToBrushConverter.cs" />
     <Compile Include="Logging\Log.cs" />
     <Page Include="MainWindow.xaml">
@@ -237,6 +238,7 @@
     <EmbeddedResource Include="Properties\LanguageResources\OptionsPageResources\Language.es.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Language.es.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\LanguageResources\OptionsPageResources\Language.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -276,22 +278,22 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FluentWPF">
-      <Version>0.8.0</Version>
+      <Version>0.9.0</Version>
     </PackageReference>
     <PackageReference Include="MaterialDesignColors">
-      <Version>2.0.0-ci2312</Version>
+      <Version>2.0.1</Version>
     </PackageReference>
     <PackageReference Include="MaterialDesignExtensions">
-      <Version>3.3.0-a01</Version>
+      <Version>3.3.0</Version>
     </PackageReference>
     <PackageReference Include="MaterialDesignThemes">
-      <Version>4.0.0-ci2312</Version>
+      <Version>4.1.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Windows.SDK.Contracts">
       <Version>10.0.19041.1</Version>
     </PackageReference>
     <PackageReference Include="ModernWpfUI">
-      <Version>0.9.3-preview.201204.0</Version>
+      <Version>0.9.4</Version>
     </PackageReference>
     <PackageReference Include="Pixelmaniac.Notifications">
       <Version>1.0.2</Version>

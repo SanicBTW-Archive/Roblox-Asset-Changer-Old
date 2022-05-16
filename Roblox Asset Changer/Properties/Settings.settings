@@ -24,7 +24,10 @@
       <Value Profile="(Default)">EDR1</Value>
     </Setting>
     <Setting Name="BuildNumber" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Build 15</Value>
+      <Value Profile="(Default)">Developer Build 15</Value>
+    </Setting>
+    <Setting Name="CurrentChannel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Preview</Value>
     </Setting>
   </Settings>
 </SettingsFile>

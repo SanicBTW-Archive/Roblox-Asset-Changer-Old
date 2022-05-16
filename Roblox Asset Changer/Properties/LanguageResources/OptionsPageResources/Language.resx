@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="behindCodePromptFolderSelecCloseBtn" xml:space="preserve">
+    <value>I'm not ready</value>
+  </data>
+  <data name="behindCodePromptFolderSelecContent" xml:space="preserve">
+    <value>A new window will now open to select the Roblox Folder, please keep in mind that it has to be the latest version of Roblox or else the program won't work</value>
+  </data>
+  <data name="behindCodePromptFolderSelecPrimBtn" xml:space="preserve">
+    <value>Let me select the folder!</value>
+  </data>
+  <data name="behindCodePromptFolderSelecTitle" xml:space="preserve">
+    <value>Roblox Folder Selection</value>
+  </data>
   <data name="Gblindev" xml:space="preserve">
     <value>Oops, tab in development, 
 this tab will be available in a future build.</value>
@@ -138,6 +150,12 @@ this tab will be available in a future build.</value>
   </data>
   <data name="RobloxDirectoryOpenFolderSelection" xml:space="preserve">
     <value>Open the roblox folder</value>
+  </data>
+  <data name="RobloxDirectoryResetBtn" xml:space="preserve">
+    <value>Reset Roblox Folder Directory</value>
+  </data>
+  <data name="RobloxDirectoryResetText" xml:space="preserve">
+    <value>Sometimes my funny code doesn't works, so I added this just in case.</value>
   </data>
   <data name="RobloxDirectorySelectFolder" xml:space="preserve">
     <value>Select the roblox folder</value>

@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="behindCodePromptFolderSelecCloseBtn" xml:space="preserve">
+    <value>No estoy preparado.</value>
+  </data>
+  <data name="behindCodePromptFolderSelecContent" xml:space="preserve">
+    <value>Una nueva ventana se abrira ahora para seleccionar la carpeta de Roblox, por favor ten en cuenta de que tiene que ser la última versión de Roblox o si no el programa no funcionara</value>
+  </data>
+  <data name="behindCodePromptFolderSelecPrimBtn" xml:space="preserve">
+    <value>¡Dejame seleccionar la carpeta!</value>
+  </data>
+  <data name="behindCodePromptFolderSelecTitle" xml:space="preserve">
+    <value>Selección de carpeta de Roblox</value>
+  </data>
   <data name="Gblindev" xml:space="preserve">
     <value>Oops, pestaña en desarrollo,
 esta pestaña estara disponible en alguna build futura.</value>
@@ -138,6 +150,13 @@ esta pestaña estara disponible en alguna build futura.</value>
   </data>
   <data name="RobloxDirectoryOpenFolderSelection" xml:space="preserve">
     <value>Abrir la carpeta de Roblox</value>
+  </data>
+  <data name="RobloxDirectoryResetBtn" xml:space="preserve">
+    <value>Reset Roblox Folder Directory</value>
+  </data>
+  <data name="RobloxDirectoryResetText" xml:space="preserve">
+    <value>Sometimes my funny code doesn't works, so I added this just in case.
+Algunas veces mi funi code no funciona, asi que he añadido esto por si acaso.</value>
   </data>
   <data name="RobloxDirectorySelectFolder" xml:space="preserve">
     <value>Seleccionar la carpeta de Roblox</value>

@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="behindCodeAssetsPromptCloseBtn" xml:space="preserve">
+    <value>Let me take a look</value>
+  </data>
+  <data name="behindCodeAssetsPromptContent" xml:space="preserve">
+    <value>Looks like you are trying to modify some asset without having the Roblox Folder configured, maybe set it up and we could work with it. </value>
+  </data>
+  <data name="behindCodeAssetsPromptPrimBtn" xml:space="preserve">
+    <value>Okay, I'll see the options page</value>
+  </data>
+  <data name="behindCodeAssetsPromptTitle" xml:space="preserve">
+    <value>Roblox Folder not detected</value>
+  </data>
   <data name="listViewAboutHeader" xml:space="preserve">
     <value>About</value>
   </data>

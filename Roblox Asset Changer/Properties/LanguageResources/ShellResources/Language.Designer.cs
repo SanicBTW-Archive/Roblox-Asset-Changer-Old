@@ -19,7 +19,7 @@ namespace Roblox_Asset_Changer.Properties.LanguageResources.ShellResources {
     // a través de una herramienta como ResGen o Visual Studio.
     // Para agregar o quitar un miembro, edite el archivo .ResX y, a continuación, vuelva a ejecutar ResGen
     // con la opción /str o recompile su proyecto de VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Language {
@@ -57,6 +57,42 @@ namespace Roblox_Asset_Changer.Properties.LanguageResources.ShellResources {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Let me take a look.
+        /// </summary>
+        public static string behindCodeAssetsPromptCloseBtn {
+            get {
+                return ResourceManager.GetString("behindCodeAssetsPromptCloseBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Looks like you are trying to modify some asset without having the Roblox Folder configured, maybe set it up and we could work with it. .
+        /// </summary>
+        public static string behindCodeAssetsPromptContent {
+            get {
+                return ResourceManager.GetString("behindCodeAssetsPromptContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Okay, I&apos;ll see the options page.
+        /// </summary>
+        public static string behindCodeAssetsPromptPrimBtn {
+            get {
+                return ResourceManager.GetString("behindCodeAssetsPromptPrimBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Roblox Folder not detected.
+        /// </summary>
+        public static string behindCodeAssetsPromptTitle {
+            get {
+                return ResourceManager.GetString("behindCodeAssetsPromptTitle", resourceCulture);
             }
         }
         

@@ -35,7 +35,7 @@ namespace Roblox_Asset_Changer
         #region Window events
         private void MainAppWindow_ContentRendered(object sender, EventArgs e)
         {
-            Title = "Roblox Asset Changer - " + Properties.Settings.Default.AppVersion + " (" + Properties.Settings.Default.BuildNumber + ")";
+            Title = "Roblox Asset Changer - " + Properties.Settings.Default.AppVersion + " (" + Properties.Settings.Default.BuildNumber + ")" + " | Current Channel: " + Properties.Settings.Default.CurrentChannel;
 
             #region Logging stuff same with console logging stuff not necessary or somethin
             /*
