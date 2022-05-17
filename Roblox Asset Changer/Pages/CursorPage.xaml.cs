@@ -27,6 +27,35 @@ namespace Roblox_Asset_Changer.Pages
             InitializeComponent();
         }
 
+        #region Load Page / Pagina cargada
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            #region Load Images
+
+            #region Arrow Cursor
+            if(System.IO.Directory.Exists(ChangerClass.robpath))
+            {
+                BitmapImage ArrowCursorImageWorker = new BitmapImage();
+                ArrowCursorImageWorker.BeginInit();
+                ArrowCursorImageWorker.CacheOption = BitmapCacheOption.OnLoad;
+                ArrowCursorImageWorker.CreateOptions = BitmapCreateOptions.IgnoreImageCache;
+                ArrowCursorImageWorker.UriSource = new Uri(ChangerClass.acdir);
+                ArrowCursorImageWorker.EndInit();
+                //preview with skybox
+                ArrowCursorPrevwSky.Source = ArrowCursorImageWorker;
+
+                //preview without skybox
+                ArrowCursorPrev.Source = ArrowCursorImageWorker;
+
+                //preview with custom color
+                ArrowCursorPrevCustColor.Source = ArrowCursorImageWorker;
+            }
+            #endregion
+
+            #endregion
+        }
+        #endregion
+
         #region Eventos de click / Click btn events
         private void ChangeACBtn_Click(object sender, RoutedEventArgs e)
         {

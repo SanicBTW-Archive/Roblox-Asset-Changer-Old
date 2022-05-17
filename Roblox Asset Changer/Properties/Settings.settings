@@ -8,9 +8,6 @@
     <Setting Name="robloxlocationFolder" Type="System.String" Scope="User">
       <Value Profile="(Default)">nul</Value>
     </Setting>
-    <Setting Name="BetaTesting" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Soon</Value>
-    </Setting>
     <Setting Name="CurrentAccent" Type="System.String" Scope="User">
       <Value Profile="(Default)">Default</Value>
     </Setting>
@@ -24,10 +21,7 @@
       <Value Profile="(Default)">EDR1</Value>
     </Setting>
     <Setting Name="BuildNumber" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Developer Build 15</Value>
-    </Setting>
-    <Setting Name="CurrentChannel" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Preview</Value>
+      <Value Profile="(Default)">Developer Build 17</Value>
     </Setting>
   </Settings>
 </SettingsFile>

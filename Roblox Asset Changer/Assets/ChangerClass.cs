@@ -19,7 +19,7 @@ namespace Roblox_Asset_Changer.Assets
 
         public static void MainChanger(string AssetToChange)
         {
-            if (robpath.Contains("C:"))
+            if (System.IO.Directory.Exists(robpath))
             {
                 if (AssetToChange.Equals("Cursor"))
                 {
@@ -46,7 +46,7 @@ namespace Roblox_Asset_Changer.Assets
             }
             else if (CursorType.Equals("Arrow Far Cursor"))
             {
-                jajadeubg("Currently changing " + CursorType + "\nMain dir " + acdir + "\nNew file dir " + ChangeAssetPath);
+                jajadeubg("Currently changing " + CursorType + "\nMain dir " + afcdir + "\nNew file dir " + ChangeAssetPath);
             }
         }
 
@@ -61,7 +61,7 @@ namespace Roblox_Asset_Changer.Assets
         private static async void PromptChangeCursor()
         {
             var shelldlg = new CommonOpenFileDialog();
-            shelldlg.Title = "Roblox Asset Changer " + Properties.Settings.Default.AppVersion + " " + Properties.Settings.Default.BuildNumber + " - placeholder";
+            shelldlg.Title = "Roblox Asset Changer - New " + currentlyChanging + " Selection";
             shelldlg.InitialDirectory = robpath;
             shelldlg.DefaultDirectory = robpath;
             shelldlg.AddToMostRecentlyUsedList = false;

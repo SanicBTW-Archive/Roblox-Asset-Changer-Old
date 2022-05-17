@@ -50,7 +50,7 @@ namespace Roblox_Asset_Changer.Pages
             rblxDirectory.Text = Properties.LanguageResources.OptionsPageResources.Language.RobloxDirectoryCurrentRobloxDirectory + " " + Properties.Settings.Default.robloxlocationFolder;
             #endregion
             #region openrblxfolderlocation
-            if (Properties.Settings.Default.robloxlocationFolder.Contains("C:"))
+            if (System.IO.Directory.Exists(Properties.Settings.Default.robloxlocationFolder))
             {
                 openrblxfolderlocation.Content = Properties.LanguageResources.OptionsPageResources.Language.RobloxDirectoryOpenFolderSelection;
             }
@@ -74,49 +74,37 @@ namespace Roblox_Asset_Changer.Pages
             }
             Properties.Settings.Default.Save();
             #endregion
-            #region AccentCB load something pending
+            #region AccentCB
             var paletteHelper = new MaterialDesignThemes.Wpf.PaletteHelper();
             ITheme theme = paletteHelper.GetTheme();
-            #region Cargar Default Accent / Load Default Accent
-            if (Properties.Settings.Default.CurrentAccent.Contains("Default"))
+            switch (Properties.Settings.Default.CurrentAccent)
             {
-                ChangePAccent.SelectedIndex = 0;
-                theme.SetPrimaryColor(Colors.SlateGray);
-                paletteHelper.SetTheme(theme);
+                case "Default":
+                    ChangePAccent.SelectedIndex = 0;
+                    theme.SetPrimaryColor(Colors.SlateGray);
+                    paletteHelper.SetTheme(theme);
+                    break;
+                case "Red":
+                    ChangePAccent.SelectedIndex = 1;
+                    theme.SetPrimaryColor(Colors.Red);
+                    paletteHelper.SetTheme(theme);
+                    break;
+                case "Blue":
+                    ChangePAccent.SelectedIndex = 2;
+                    theme.SetPrimaryColor(Colors.Blue);
+                    paletteHelper.SetTheme(theme);
+                    break;
+                case "Yellow":
+                    ChangePAccent.SelectedIndex = 3;
+                    theme.SetPrimaryColor(Colors.Yellow);
+                    paletteHelper.SetTheme(theme);
+                    break;
+                case "Green":
+                    ChangePAccent.SelectedIndex = 4;
+                    theme.SetPrimaryColor(Colors.Green);
+                    paletteHelper.SetTheme(theme);
+                    break;
             }
-            #endregion
-            #region Cargar Red Accent / Load Red Accent
-            if (Properties.Settings.Default.CurrentAccent.Contains("Red"))
-            {
-                ChangePAccent.SelectedIndex = 1;
-                theme.SetPrimaryColor(Colors.Red);
-                paletteHelper.SetTheme(theme);
-            }
-            #endregion
-            #region Cargar Blue Accent / Load Blue Accent
-            if (Properties.Settings.Default.CurrentAccent.Contains("Blue"))
-            {
-                ChangePAccent.SelectedIndex = 2;
-                theme.SetPrimaryColor(Colors.Blue);
-                paletteHelper.SetTheme(theme);
-            }
-            #endregion
-            #region Cargar Yellow Accent / Load Yellow Accent
-            if (Properties.Settings.Default.CurrentAccent.Contains("Yellow"))
-            {
-                ChangePAccent.SelectedIndex = 3;
-                theme.SetPrimaryColor(Colors.Yellow);
-                paletteHelper.SetTheme(theme);
-            }
-            #endregion
-            #region Cargar Green Accent / Load Green Accent
-            if (Properties.Settings.Default.CurrentAccent.Contains("Green"))
-            {
-                ChangePAccent.SelectedIndex = 4;
-                theme.SetPrimaryColor(Colors.Green);
-                paletteHelper.SetTheme(theme);
-            }
-            #endregion
             #endregion
             #region Theme swetich lol
             if (Properties.Settings.Default.CurrentTheme.Contains("Dark"))
@@ -164,12 +152,15 @@ namespace Roblox_Asset_Changer.Pages
         #region Página del directorio de Roblox
         private void openrblxfolderlocation_Click(object sender, RoutedEventArgs e)
         {
-            if (Properties.Settings.Default.robloxlocationFolder.Contains("C:"))
+            if (System.IO.Directory.Exists(Properties.Settings.Default.robloxlocationFolder))
             {
                 System.Diagnostics.Process.Start("explorer.exe", Properties.Settings.Default.robloxlocationFolder);
                 openrblxfolderlocation.Content = Properties.LanguageResources.OptionsPageResources.Language.RobloxDirectoryOpenFolderSelection;
             }
-            RobloxFolderSelectPrompt();
+            else
+            {
+                RobloxFolderSelectPrompt();
+            }
         }
         private void resetrlbxfolderlocation_Click(object sender, RoutedEventArgs e)
         {
@@ -184,36 +175,33 @@ namespace Roblox_Asset_Changer.Pages
         {
             var paletteHelper = new MaterialDesignThemes.Wpf.PaletteHelper();
             ITheme theme = paletteHelper.GetTheme();
-
-            if (ChangePAccent.SelectedIndex == 0)
+            switch (ChangePAccent.SelectedIndex)
             {
-                theme.SetPrimaryColor(Colors.SlateGray);
-                paletteHelper.SetTheme(theme);
-                Properties.Settings.Default.CurrentAccent = "Default";
-            }
-            else if(ChangePAccent.SelectedIndex == 1)
-            {
-                theme.SetPrimaryColor(Colors.Red);
-                paletteHelper.SetTheme(theme);
-                Properties.Settings.Default.CurrentAccent = "Red";
-            }
-            else if (ChangePAccent.SelectedIndex == 2)
-            {
-                theme.SetPrimaryColor(Colors.Blue);
-                paletteHelper.SetTheme(theme);
-                Properties.Settings.Default.CurrentAccent = "Blue";
-            }
-            else if (ChangePAccent.SelectedIndex == 3)
-            {
-                theme.SetPrimaryColor(Colors.Yellow);
-                paletteHelper.SetTheme(theme);
-                Properties.Settings.Default.CurrentAccent = "Yellow";
-            }
-            else if (ChangePAccent.SelectedIndex == 4)
-            {
-                theme.SetPrimaryColor(Colors.Green);
-                paletteHelper.SetTheme(theme);
-                Properties.Settings.Default.CurrentAccent = "Green";
+                case 0:
+                    theme.SetPrimaryColor(Colors.SlateGray);
+                    paletteHelper.SetTheme(theme);
+                    Properties.Settings.Default.CurrentAccent = "Default";
+                    break;
+                case 1:
+                    theme.SetPrimaryColor(Colors.Red);
+                    paletteHelper.SetTheme(theme);
+                    Properties.Settings.Default.CurrentAccent = "Red";
+                    break;
+                case 2:
+                    theme.SetPrimaryColor(Colors.Blue);
+                    paletteHelper.SetTheme(theme);
+                    Properties.Settings.Default.CurrentAccent = "Blue";
+                    break;
+                case 3:
+                    theme.SetPrimaryColor(Colors.Yellow);
+                    paletteHelper.SetTheme(theme);
+                    Properties.Settings.Default.CurrentAccent = "Yellow";
+                    break;
+                case 4:
+                    theme.SetPrimaryColor(Colors.Green);
+                    paletteHelper.SetTheme(theme);
+                    Properties.Settings.Default.CurrentAccent = "Green";
+                    break;
             }
             Properties.Settings.Default.Save();
         }
@@ -343,7 +331,7 @@ namespace Roblox_Asset_Changer.Pages
 
             var oldshelldlg = new CommonOpenFileDialog();
 
-            oldshelldlg.Title = "Roblox Asset Changer " + Properties.Settings.Default.AppVersion + " - Roblox folder selection";
+            oldshelldlg.Title = "Roblox Asset Changer - Roblox folder selection";
             oldshelldlg.IsFolderPicker = true;
 
             oldshelldlg.InitialDirectory = RobloxStarterDirectory;

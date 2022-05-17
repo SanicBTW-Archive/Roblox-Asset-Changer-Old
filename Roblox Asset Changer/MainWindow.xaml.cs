@@ -35,17 +35,15 @@ namespace Roblox_Asset_Changer
         #region Window events
         private void MainAppWindow_ContentRendered(object sender, EventArgs e)
         {
-            Title = "Roblox Asset Changer - " + Properties.Settings.Default.AppVersion + " (" + Properties.Settings.Default.BuildNumber + ")" + " | Current Channel: " + Properties.Settings.Default.CurrentChannel;
+            Title = "Roblox Asset Changer - " + Properties.Settings.Default.AppVersion + " (" + Properties.Settings.Default.BuildNumber + ")";
 
-            #region Logging stuff same with console logging stuff not necessary or somethin
-            /*
+            #region Logging stuff
             string UserConf = GetDefaultExeConfigPath(ConfigurationUserLevel.PerUserRoamingAndLocal);
-            string registros = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), UserConf.Replace("user.config", Properties.Settings.Default.AppVersion));
+            string registros = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), UserConf.Replace("user.config", Properties.Settings.Default.AppVersion + "-Logs"));
             Log oLog = new Log(registros);
 
-            oLog.Add("Application started! Roblox Asset Changer made by Sanic, any Roblox assets belongs to its trademark, you are currently using: " + Properties.Settings.Default.AppVersion + " currently trying to do an updater");
+            oLog.Add("Application started! Roblox Asset Changer made by Sanic, any Roblox assets belongs to its trademark, you are currently using: " + Properties.Settings.Default.AppVersion);
             oLog.Add("Log viewer currently in progress, its currently unavailable");
-            */
 
             #endregion
             #region Notifications and the notification manager thingy or placeholder idk
@@ -65,7 +63,7 @@ namespace Roblox_Asset_Changer
 
                 notificationManager.Notify(TestingNotification);
 
-                //oLog.Add("TestingNotification has been notified in the application");
+                oLog.Add("TestingNotification ENG has been notified in the application");
             }
             else if (Properties.Settings.Default.languageCode.Contains("es-ES"))
             {
@@ -79,62 +77,51 @@ namespace Roblox_Asset_Changer
 
                 notificationManager.Notify(TestingNotification);
 
-                //oLog.Add("TestingNotification has been notified in the application");
+                oLog.Add("TestingNotification ESP has been notified in the application");
             }
             #endregion
             #region Load stuff
             #region Theme stuff
             var paletteHelper = new MaterialDesignThemes.Wpf.PaletteHelper();
             ITheme theme = paletteHelper.GetTheme();
-            #region Cargar Default Accent / Load Default Accent
-            if (Properties.Settings.Default.CurrentAccent.Contains("Default"))
+            //accent color
+            switch (Properties.Settings.Default.CurrentAccent)
             {
-                theme.SetPrimaryColor(Colors.SlateGray);
-                paletteHelper.SetTheme(theme);
+                case "Default":
+                    theme.SetPrimaryColor(Colors.SlateGray);
+                    paletteHelper.SetTheme(theme);
+                    break;
+                case "Red":
+                    theme.SetPrimaryColor(Colors.Red);
+                    paletteHelper.SetTheme(theme);
+                    break;
+                case "Blue":
+                    theme.SetPrimaryColor(Colors.Blue);
+                    paletteHelper.SetTheme(theme);
+                    break;
+                case "Yellow":
+                    theme.SetPrimaryColor(Colors.Yellow);
+                    paletteHelper.SetTheme(theme);
+                    break;
+                case "Green":
+                    theme.SetPrimaryColor(Colors.Green);
+                    paletteHelper.SetTheme(theme);
+                    break;
             }
-            #endregion
-            #region Cargar Red Accent / Load Red Accent
-            if (Properties.Settings.Default.CurrentAccent.Contains("Red"))
+            //theme
+            switch (Properties.Settings.Default.CurrentTheme)
             {
-                theme.SetPrimaryColor(Colors.Red);
-                paletteHelper.SetTheme(theme);
+                case "Dark":
+                    ModernWpf.ThemeManager.Current.ApplicationTheme = ModernWpf.ApplicationTheme.Dark;
+                    theme.SetBaseTheme(Theme.Dark);
+                    paletteHelper.SetTheme(theme);
+                    break;
+                case "Light":
+                    ModernWpf.ThemeManager.Current.ApplicationTheme = ModernWpf.ApplicationTheme.Light;
+                    theme.SetBaseTheme(Theme.Light);
+                    paletteHelper.SetTheme(theme);
+                    break;
             }
-            #endregion
-            #region Cargar Blue Accent / Load Blue Accent
-            if (Properties.Settings.Default.CurrentAccent.Contains("Blue"))
-            {
-                theme.SetPrimaryColor(Colors.Blue);
-                paletteHelper.SetTheme(theme);
-            }
-            #endregion
-            #region Cargar Yellow Accent / Load Yellow Accent
-            if (Properties.Settings.Default.CurrentAccent.Contains("Yellow"))
-            {
-                theme.SetPrimaryColor(Colors.Yellow);
-                paletteHelper.SetTheme(theme);
-            }
-            #endregion
-            #region Cargar Green Accent / Load Green Accent
-            if (Properties.Settings.Default.CurrentAccent.Contains("Green"))
-            {
-                theme.SetPrimaryColor(Colors.Green);
-                paletteHelper.SetTheme(theme);
-            }
-            #endregion
-            #region Cargar el tema de la aplicación / Load application theme
-            if (Properties.Settings.Default.CurrentTheme.Contains("Dark"))
-            {
-                ModernWpf.ThemeManager.Current.ApplicationTheme = ModernWpf.ApplicationTheme.Dark;
-                theme.SetBaseTheme(Theme.Dark);
-                paletteHelper.SetTheme(theme);
-            }
-            else if (Properties.Settings.Default.CurrentTheme.Contains("Light"))
-            {
-                ModernWpf.ThemeManager.Current.ApplicationTheme = ModernWpf.ApplicationTheme.Light;
-                theme.SetBaseTheme(Theme.Light);
-                paletteHelper.SetTheme(theme);
-            }
-            #endregion
             #endregion
             #endregion
         }
